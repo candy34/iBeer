@@ -14,7 +14,7 @@ light tan: #eeebda
 body{
     font-family: 'Noto Serif', serif;
     line-height: 1.8;
-    margin: 20;
+    margin: 0;
     background-color: #eeebda;
     display:flex;
     flex-wrap: wrap; 
@@ -37,11 +37,12 @@ img{
 }
 .wrapper{
     width: 1000px;
-    justify-content:  center;
-
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
 }
-
-    /*
+  /*
         TODO: 
         - Center up the page
         - Create a flexbox containerer for
@@ -51,23 +52,27 @@ img{
 
 #site-header{
   display:flex;
+  flex-wrap:wrap;
   flex-direction: column;
-
-  
-    
-    
+}
+.main-aside-container{
+    display: flex;
+    width:800px;
+    margin: 0 auto;
+    position: relative;
+    top: -35px;
+ 
+}  
     /*
         TODO
         - Flexbox property here
     */
-}
+
 #site-header div{
     text-align: center;
     padding: 50px 0 100px 0;
     font-size: 4em;
     background-image: url( "img/header-img.jpg");
-    
-    
 
     /*
         TODO: 
@@ -92,7 +97,7 @@ img{
     color: white;
     bottom: 20px;
     text-shadow: 0 5px 8px rgba( 0, 0, 0, 0.3 );
-    font-family:  'Dancing Script';
+    font-family: 'Dancing Script';
     /*
         TODO: 
         - Use the script font: 'Dancing Script' fot this text
@@ -111,11 +116,7 @@ img{
    color: white;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 10px 20px;
-    
-
-    
-    
+    padding: 10px 20px;  
 
     /*
         TODO: 
@@ -125,9 +126,6 @@ img{
 #main-navigation #logo{
     margin-right: 400px;
     flex: 1;
-
-    
-
     /*
         TODO: 
         - Flexbox - The logo needs to take up more space
@@ -135,42 +133,35 @@ img{
     */
 }
 main{
-    padding: 20px;
+    padding: 20px; 
     background-color: #444;
     box-shadow: -5px 5px 8px rgba( 0, 0, 0, 0.3 );
     display: flex;
-    flex-wrap: wrap;
-    flex-basis:40%;
-    position: relative;
-    width:600px;
-    top:-46px;
-    margin-left: 50px;
+    flex-wrap: wrap; 
+    /* flex-basis:40%; */
+    position: relative; 
     
-
-    
-
     /*
-        TODO: 
+      TODO: 
         - Flexbox: Set the starting width of this element
         - Use relative positioning to bump this upward
     */
 }
 aside{
-    padding: 20px;
+     padding: 20px; 
     background-color: #eee;
     box-shadow: 5px 5px 8px rgba( 0, 0, 0, 0.3 );
-    width:100px;
-    flex-basis: 20%;
-    flex-wrap: wrap;
-    position: relative; 
-    width:200px;
-    top: -1885px;
-    right: -700px;
-  /*
-        TODO: 
+    /* width:100px; 
+    flex-basis: 20%; 
+     flex-wrap: wrap; 
+     position: relative;   
+    top: -1925px;
+    right: -600px;   */
+    
+        /* TODO: 
         - Flexbox: Set the starting width of this element
-        - Use relative positioning to bump this upward
-    */
+        - Use relative positioning to bump this upward */
+    /* */ 
 }
 aside h3{
     text-align: center;
@@ -237,6 +228,7 @@ article footer p{
 #site-footer{
     
     background: #333;
+    color: white;
     display:flex;
     flex-wrap:wrap;
     flex-direction: column;
